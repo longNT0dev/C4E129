@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Giúp đảm bảo chiều rộng của thẻ không bị thay đổi khi dùng padding,margin ở 1 mức nào đó */
+    box-sizing: border-box;
+}
+
+body {
+    height: 5000px;
+}
+
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.box-1 {
+    /* padding-left: 20px; */
+    /* shorthand 4 giá trị: trên phải dưới trái */
+    /* padding: 10px 5px 20px 40px; */
+    /* shorthand 2 giá trị  */
+    /* padding: 20px 80px; */
+    background-color: red;
+    /* margin-bottom: 20px; */
+}
+
+.box-2 {
+    background-color:blue
+}
+
+
+span {
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.relative {
+    position: absolute;
+    background-color:black;
+    /* top
+    left
+    right  
+    bottom */
+    /* left: 30px; */
+    margin-left:60px
+}
+
+.absolute {
+    width: 25px;
+    height: 25px;
+    background-color:green;
+    position: absolute;
+    left: 20px;
+}
+
+.fixed {
+    width: 100%;
+    position:fixed;
+    top: 10px;
+    background-color:purple;
+}
+
+.sticky {
+    width: 100%;
+    margin-top: 200px;
+    background-color:purple;
+    position: sticky;
+    top: 20px;
+}
+
+.bordered {
+    border: 3px solid black;
+}

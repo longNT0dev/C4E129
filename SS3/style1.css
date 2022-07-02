@@ -1,0 +1,31 @@
+/* Khái niệm về bộ chọn */
+
+/* C1: Chọn thông qua tag name (tên thẻ)  */
+h1 {
+    /*  key : value;  */
+    color: purple;
+    background-color:green
+}
+
+/* C2: Chọn thông qua class */
+.text-blue  {
+    color: blue;
+}
+
+.bg-red {
+    background-color: red
+}
+
+
+/* C3: Chọn thông qua id */
+#example {
+    color: yellow;
+}
+
+#example1 {
+    color: yellow;
+}
+
+/* Tính tái sử dụng */
+
+

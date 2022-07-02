@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /* Khái niệm về bộ chọn */
+
+        /* C1: Chọn thông qua tag name (tên thẻ)  */
+        h1 {
+            color: purple
+        }
+        /* C2: Chọn thông qua class */
+        .text-blue {
+            color: blue;
+        }
+        /* C3: Chọn thông qua id */
+        #example {
+            color: yellow;
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <!-- Các cách CSS: 3 cách   -->
+
+    <!-- C1: inline style -->
+    <p style="color:red">Đây là inline style</p>
+
+    <!-- C2: internal style   -->
+    <!-- Sử dụng thẻ style trong html và đặt ở trong phần head  -->
+    <!-- Quy tắc đặt tên class - BEM  -->
+    <h1>Đây là thẻ được style thông qua tên thẻ</h1>
+    <h2 class="text-blue">Đây là thẻ được style thông qua tên class</h2>
+    <h3 id="example">Đây là thẻ được style thông qua tên id</h3>
+    <!-- C3: external style -->
+    <!-- Link file css với file html thông qua thẻ link đặt trong phần head  -->
+
+
+    <!-- Phân biệt id và class  -->
+   
+    <!-- Một thẻ chỉ có 1 id duy nhất  -->
+    <!-- Một thẻ có thể có nhiều class và cách nhau bởi dấu cách  -->
+    <h3 id="example1" class="bg-red">Đây là thẻ được style thông qua tên nhiều id</h3>
+    <h2 class="text-blue bg-red">Đây là thẻ được style thông qua tên class</h2>
+
+    
+
+    
+</body>
+</html>

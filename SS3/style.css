@@ -1,0 +1,23 @@
+.container {
+    background-color: #0b8080;
+}
+
+.information > img {
+    border-radius: 50%;
+}
+
+hr {
+    width: 80%;
+    border-top: 3px dashed black;
+    transform: translateX(-70px);
+}
+
+.text-aqua {
+    color: #0b8080;
+}
+
+i {
+    width: 15px;
+    height: 15px;
+    color: yellow;
+}

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0px 24px 40px 24px;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 130px;
+    height: 36px;
+    display: flex;
+    align-items: center
+}
+
+.menu i {
+    margin-right: 27px;
+}
+
+.menu h1 {
+    font-family: 'Peralta', cursive;
+}
+
+.search-bar {
+    width: 471px;
+    height: 40px;
+    position: relative;
+    color: #828282;
+}
+
+.search-bar i {
+    position: absolute;
+    top: 28%;
+    left: 16px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 100%;
+    padding-left: 46px;
+    border: 2px solid#828282;
+    border-radius: 8px;
+}
+
+.search-bar input::placeholder {
+    color: #828282;
+}
+
+.search-bar input:hover {
+    border-color: #ff6cd3
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #ff6cd3
+}
+
+.home {
+    width: 130px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.home img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
+}
+
+
+/* speaker-part  */
+.speaker-part {
+    width: 100%;
+    height: auto;
+    padding: 16px 24px 0px 24px;
+}
+
+.speaker-part h1 {
+    width: 239px;
+    height: 68px;
+}
+
+.speaker-part h1 small {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 32px;
+}
+
+.speakers-container {
+    width: 100%;
+    height: auto;
+}
+
+.speakers-item {
+    width: 476px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+.speakers-information {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    padding: 16px;
+}
+
+.speakers-information img {
+    width: 50%;
+    height: 200px;
+    border-radius: 16px
+}
+
+.information {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 0px 16px;
+    font-size: 15px;
+}
+
+.information h2 {
+    font-size:normal;
+}
+
+.information section {
+    display: flex;
+    column-gap: 8px;
+}
+
+.social-media {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 96px 0px 16px;
+}
+
+.contact {
+    width: 50%;
+    padding-right: 72px;
+    display: flex;
+    justify-content: space-between;
+}
