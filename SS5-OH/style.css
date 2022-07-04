@@ -5,6 +5,18 @@
     font-family: 'Open Sans';
 }
 
+
+/* Shared styles css */
+.bordered {
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+}
+
+
 .container {
     width: 100%;
     height: 100%;
@@ -104,6 +116,10 @@ header {
 .speakers-container {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
 .speakers-item {
@@ -112,18 +128,43 @@ header {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+    background: linear-gradient(to left, #FFD38A 50%, #e2e2e2 50%);
 }
 
 .speakers-information {
     width: 100%;
     height: 85%;
     display: flex;
+}
+
+
+.image-container {
+    width: 50%;
+    height: 200px;
     padding: 16px;
+    position: relative;
+}
+
+.status {
+    width: fit-content;
+    height: 32px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: #69A042;
+    border-radius: 16px 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    font-style: normal;
+    text-align: center;
+    padding: 0px 4px;
 }
 
 .speakers-information img {
-    width: 50%;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     border-radius: 16px
 }
 
@@ -136,7 +177,7 @@ header {
 }
 
 .information h2 {
-    font-size:normal;
+    font-size: normal;
 }
 
 .information section {
@@ -148,8 +189,8 @@ header {
     width: 100%;
     height: 15%;
     display: flex;
-    justify-content:space-between;
-    padding: 0px 96px 0px 16px;
+    justify-content: space-between;
+    padding: 0px 48px 0px 16px;
 }
 
 .contact {
@@ -157,4 +198,22 @@ header {
     padding-right: 72px;
     display: flex;
     justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+}
+
+/* Responsive   */
+@media only screen and (max-width: 600px) {
+    
+    .social-media {
+        flex-direction: row-reverse;
+    }
+
+    .contact {
+        padding-left: 36px;
+    }
 }
