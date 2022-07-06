@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1. Ví dụ về biến 
+        // const PI = 3.14
+        // let name = "Trần Hải Anh"
+
+        // Hãy tính tổng của 2 số 3 và 4 
+        // console.log(3 + 4)
+        // Hãy tính tổng của 2 số a và b biết a và b được người dùng nhập vào
+        // Giá trị nhập vào từ prompt sẽ là 1 string
+        // + - * / 
+        // Phép + sẽ luôn ưu tiên + string 
+        // -> Luôn phải kiểm tra dữ liệu nhận được đúng với yêu cầu
+        // Number giúp convert sang số 
+        // let a = Number(prompt("Nhập số a"))
+        // let b = Number(prompt("Nhập số b"))
+        // console.log(a + b) 
+
+        // 2. Các toán tử trong js  + - * / %
+        console.log(3 + 4)
+        console.log(4 - 3)
+        console.log(3 * 4)
+        console.log(21 / 5)
+        console.log(21 % 5) // 1 => 21  chia 5 được 4 dư 1
+        console.log("Dấu chấm là dấu phẩy", 3.14)
+        console.log(2 ** 3)  // 2^3 = 2 * 2 * 2
+
+        // 3. Tản mạn về biến
+
+        // // Khai báo biến
+        // let name = "Long"
+        // // Gán lại giá trị cho biến đó
+        // name = "Nam"
+        // let age = 25
+
+        // {
+        //     // Khai báo biến
+        //     let name = "Ngô Hồng Phong"
+        // }
+
+        // let name = "Long"
+        // {
+        //     let name = "Ngô Hồng Phong"
+        //     // 1000 dòng code 
+        //     console.log(name)
+        // }
+        // console.log(name)
+        // (0,1) -> (0,100) -> (0,101) -> (1,101)
+        // (0,1) -> (0,99) -> (1,100)
+
+        // floor -> 0.7 -> 0
+        // ceil -> 0.7 -> 1
+        // round -> 0.7 -> 1
+                //  0.4 -> 0     
+        let a = Math.floor((Math.random() * 99)) + 1
+        let b = Math.ceil((Math.random() * 99)) + 1
+        let c = Math.round((Math.random() * 99)) + 1
+
+        let x = Number(prompt("Nhập số x"))
+
+        let result = a*(x**2) + b*x + c
+        console.log(`Kết quả của ax^2 + bx + c là: ${result} USD`)
+
+    </script>
+</body>
+
+</html>
