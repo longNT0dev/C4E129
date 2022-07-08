@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    // 1. Chữa BTVN 
+        // Giả sử 10000 là giá tiền của 5 lon coca chưa VAT
+        const VATcoca = 0.05
+        const VATwine = 0
+        // Giá 5 lon coca 
+        const cocaPrice = 10000
+        // Giá coca có VAT
+        const cocaPriceWithVAT = cocaPrice + cocaPrice * VATcoca
+        // Giá 1 lít rượu
+        const winePrice = 15000
+
+        console.log(`Tổng tiền coca không VAT là ${cocaPrice}`)
+        console.log(`Tổng tiền coca có VAT là ${cocaPriceWithVAT}`)
+        console.log(`Tổng tiền rượu không VAT là ${winePrice * 25}`)
+        console.log(`Tổng tiền rượu có VAT là ${winePrice * 25 + winePrice * VATwine * 25}`)
+        console.log(`Tổng tiền không VAT là ${cocaPrice + winePrice * 25}`)
+        console.log(`Tổng tiền có VAT là ${cocaPriceWithVAT + winePrice * 25}`)
+
+    // 2. Bài tập về câu điều kiện if 
+        // Input: 1.678 1.734 2.014 2.536 x 
+        // Output: Số tiền 
+        const PriceRate1 = 1.678
+        const PriceRate2 = 1.734
+        const PriceRate3 = 2.014
+        const PriceRate4 = 2.536
+        // Number(prompt("Nhập số điện gia đình sử dụng "))
+        const x = 5
+
+        // Tr1: 0-50
+        // Trh2: 51-100
+        // Trh3: 101-200
+        // Trh4: 201 trở lên
+        let result = 0
+
+        if (x >= 0 && x <= 50) {
+            result += x * PriceRate1
+        } else if (x >= 51 && x <= 100) {
+            result += 50 * PriceRate1 + (x - 50) * PriceRate2
+        } else if (x >= 101 && x <= 200) { 
+            result += 50 * PriceRate1 + 50 * PriceRate2 + (x - 100) * PriceRate3
+        } else if (x >= 201) {
+            result += 50 * PriceRate1 + 50 * PriceRate2 + 100 * PriceRate3 + (x - 200) * PriceRate4
+        } else {
+            result = "Có gì đó sai sai"
+        }
+
+        console.log(result)
+
+    // Bài 3: Bài tập về vòng lặp for
+        // 3.1. Tính tổng các số từ 3 - 30
+        let sum = 0
+        for(let i = 3; i <= 30; i++) {
+            // sum = sum + i 
+            sum += i
+        }
+        console.log(sum)
+
+        // let i = 3
+        // i <= 30 hay không
+        //     Có -> Đi vào trong khối lệnh thực hiện gán sum += i
+        //           Tăng i lên 1 
+        //     Không -> Kết thúc  
+
+
+        // 3.2. Tính tổng các số chẵn từ 0 - 75
+        // let sum1 = 0 
+        // for(let i = 0; i <= 75; i++) {
+        //     if(i % 2 == 0) {
+        //         sum1 += i
+        //     }
+        // }
+
+        let sum1 = 0 
+        for(let i = 0; i <= 75; i = i + 2) {
+                sum1 += i
+        }
+
+        // 3.3. In ra tam giác vuông (cho hình ảnh sau): Gợi ý dùng 2 vòng lặp 
+        let n = 5
+        for(let i = 0; i < n; i++) {
+            for(let j = 0; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        } 
+                            //    i
+        // i = 0 => j = 0 => 0 <= 0 => Có in ra sao 
+        //          j = 1 => 1 <= 0 => Sai 
+        //          In ra dấu xuống dòng
+        // i = 1 => j = 0 => 0 <= 1 => In 
+        //          j = 1 => 1 <= 1 => In 
+        //          j = 2 => 2 <= 1 => Sai 
+        //          In ra dấu xuống dòng
+        // i = 2 
+        // ....
+
+        // 3.4. Tính tổng căn (cho hình ảnh sau)
+        
+    </script>
+</body>
+
+</html>
