@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1. Function: Chia nhỏ đoạn code -> Đoạn code gọn gàng hơn và tính tái sử dụng 
+       // Cách thức khai báo 1 function 
+       function  isPositiveOrNegative(num) {
+          // TODO function : Quá trình xử lí công việc nào đó   
+          if(isNaN(Number(num))) {
+              console.log(`${num} không phải là 1 số`)  
+          }else if(num > 0) {
+             console.log(`${num} là 1 số dương`)  
+          }else if(num < 0) {
+             console.log(`${num} là 1 số âm`)  
+          }else if(num == 0) {
+             console.log(`${num} không phải số dương cũng không phải số âm`)  
+          }else {
+            console.log("Lỗi không xác định")
+          }
+       }
+       // Gọi hàm để sử dụng
+       isPositiveOrNegative(25)
+       isPositiveOrNegative(-8)
+       isPositiveOrNegative(0)
+    
+       // callback - Một function là tham số của function khác 
+        //    function A(x) {
+
+        //    }
+        //    // x -> callback 
+        //    function x() {
+
+        //    }
+        function isPrime(num) {
+            if(num < 2) {
+                console.log(`${num} không phải số nguyên tố`)
+            }else if(num == 2) {
+                console.log(`${num} là số nguyên tố`)
+            }
+            else if(num > 2) {
+                for(let i = 2; i < num ; i++) {
+                    if(num % i == 0) {
+                        console.log(`${num} không phải số nguyên tố`)
+                        return  
+                    }
+                }
+                console.log(`${num} là số nguyên tố`)
+            }
+        }
+        isPrime(7)
+        isPrime(8)
+
+
+        function countChars(str) {
+            let countA = 0
+            let countI = 0
+            for(let i = 0; i < str.length; i++) {
+                if(str[i] === 'a') {
+                    countA++
+                }else if(str[i] === 'i') {
+                    countI++
+                }else {
+                    // Dont do anything
+                }
+            }
+
+            console.log(`Số kí tự a là: ${countA}`)
+            console.log(`Số kí tự i là: ${countI}`)
+        }
+
+        countChars("auffAdsdyiiurkf;vcklf")
+
+    // 2. Array: Lưu trữ dữ liệu, cách viết ngắn gọn 
+    let num1 = 5 
+    let num2 = 6
+    let num3 = 7
+    // typescript: type + javascript
+
+    // CRUD: Create - Read - Update - Delete 
+
+    // Create
+    let numberArr = [ 5, 6, 7, "hello", [], true, false ] 
+
+    // Read 
+    // console.log("Đây là phần tử đầu tiên của array",numberArr[0])    
+    // console.log("Đây là phần tử đầu tiên của array",numberArr[1])    
+    // console.log("Đây là phần tử đầu tiên của array",numberArr[2])    
+    // console.log("Đây là phần tử đầu tiên của array",numberArr[3])  
+    
+    for(let i = 0; i< numberArr.length; i++) {
+        console.log(numberArr[i])
+    }
+
+    // Update 
+    // numberArr[5] = 20
+    // console.log(numberArr)
+    // numberArr[4] = "Minh"
+    // console.log(numberArr)
+
+    // Delete
+    // splice 
+    // let arr1 = [1,2,3,4,5,6]
+
+    // let newArr = arr1.splice(0,3)
+    // console.log(arr1)
+    // console.log(newArr)
+    // console.log(arr1)
+        
+    // slice 
+    // let arr1 = [1,2,3,4,5,6]
+    // // Vị trí kết thúc của slice - 1 
+    // let newArr = arr1.slice(0,3) 
+    // console.log(arr1)
+    // console.log(newArr)
+
+    // Một số hàm không làm thay đổi mảng ban đầu: slice, map, filter 
+
+    
+    
+
+    </script>
+</body>
+</html>
