@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object: 1 đối tượng trong đời sống (Thuộc tính, hoạt động - function)
+
+        // Create 
+        let user = {
+            // key1: value1,
+            // key2: value2
+
+            // Thuộc tính của user
+            username: "Long",
+            password: "12345678",
+            address: "Quận Hai Bà Trưng",
+            phone: "0123456789",
+            age: 35,
+
+            // Hoạt động/ hành động của user
+            viewPhotos: function () {
+
+            },
+            login: function () {
+                console.log("Bạn đã login thành công")
+            },
+            logout: function () {
+
+            },
+            viewProfile: function () {
+                console.log(this.username)
+                console.log(this.password)
+                console.log(this.address)
+                console.log(this.phone)
+                console.log(this.age)
+            },
+            changesPassword: function (newPassword) {
+                this.password = newPassword
+            }
+        }
+
+        // Read
+        // console.log(user.age)
+        // console.log(user.username)
+        // user.viewProfile()
+        // user.changesPassword("Password changed")
+        // user.viewProfile()
+
+        // Update
+        // user.username = "Khoa vịt"
+        // user.newKey = "New key created"
+        // console.log(user)
+
+        // Delete: delete luôn được thực hiện trước khi in ra dữ liệu bằng console
+        // delete user.newKey
+
+        // Method trong object 
+        // assign: Tạo ra 1 object mới, không ảnh object ban đầu
+        // let admin = Object.assign(user,{role:"admin"})
+        // console.log(admin)
+        // {a:2} , {b:3} -> {a:2,b:3}
+
+
+        // Ex7.4: Viết hàm tìm kiếm với 2 tham số đầu vào tham số thứ nhất là một chuỗi bất kỳ, tham số thứ 2 là ký tự cần tìm; tìm kiếm và hiển thị ra vị trí của ký tự cần tìm trong chuỗi được truyền, nếu không có thì hiển thị không có ký tự trùng
+        // Lưu ý: không phân biệt chữ hoa chữ thường
+        const findCharacterPosition = (str, char) => {
+            if (char.length !== 1) {
+                console.log("Giá trị đầu vào không hợp lệ")
+                return
+            }
+            // Chuẩn hóa dữ liệu đầu vào
+            let normalizedStr = str.toLowerCase();
+            let normalizedChar = char.toLowerCase();
+
+            let flag = true
+            for (let i = 0; i < normalizedStr.length; i++) {
+                if (normalizedStr[i] === normalizedChar) {
+                    console.log("Kí tự xuất hiện tại vị trí thứ ", i + 1)
+                    flag = false
+                }
+            }
+
+            if (flag) {
+                console.log("Không có kí tự trùng nhau")
+                return
+            }
+        }
+        // findCharacterPosition("AbCCRTUavj","a")
+
+        // Ex7.8: Cho 1 mảng học sinh: arrStudents = [‘Lan’, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘Trinh’];
+        // + Thêm ‘An’ vào sau ‘Ngạn’ -> Hiển thị [‘Lan’, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘An’, ‘Trinh’];
+        // + Xóa ‘Ngọc’ -> hiển thị [‘Lan’, ‘Điệp’,,’Ngạn’, ‘Trinh’];
+        // + Tìm kiếm và hiển thị vị trí của người tên là Trinh  trong mảng
+        // + Cập nhật ‘Lan’ thành ‘Phú’ -> Hiển thị [‘Phú, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘Trinh’];
+
+        // let arrStudents = ["Lan", "Điệp", "Ngọc", "Ngạn", "Trinh"]
+        // let indexOfNgan = arrStudents.indexOf("Ngạn")
+        // // arrStudents.splice(indexOfNgan + 1, 0, "An")
+        // // arrStudents.splice(2,1)
+        // let indexOfTrinh = arrStudents.indexOf("Trinh")
+        // arrStudents[0] = "Phú"
+        // console.log(arrStudents)
+
+
+    </script>
+</body>
+
+</html>
